@@ -1,0 +1,27 @@
+@(message:List[String])
+
+@main("explore") {
+@defining(play.core.PlayVersion.current) { version =>
+
+<section id="content">
+  <div class="wrapper doc">
+    <article>
+      <h2>Corona Worldwide overview</h2><h4>Country,Totalcases,Totaldeaths</h4>
+
+           <ul style="color:yellowgreen">
+			@message.map { message =>
+			<li>
+			<b >@message</b>
+			</li>
+			}
+			</ul>
+        
+    </article>
+    <aside>
+      @commonSidebar()
+    </aside>
+  </div>
+</section>
+
+}
+}

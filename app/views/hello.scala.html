@@ -1,0 +1,39 @@
+	
+
+
+@(people: (List[Person],String))
+@main("corona") {
+@defining(play.core.PlayVersion.current) { version =>
+
+<section id="content">
+     <center><b> Last Updated -  @people._2</b></center>
+          
+  <div class="wrapper doc">
+
+      
+    <article>
+    
+    <img src="assets/images/corona.png" alt="Play Stack" class="small-5 medium-4 large-3" />
+     
+
+      <p>Here are the top five countries with <b>total cases:</b></p>
+			      <ul style="color:yellowgreen">
+			@people._1.map { person =>
+			<li>
+			<b >@person.name</b>
+			</li>
+			}
+			</ul>
+
+      <p>To explore more about corona <a href="@routes.HomeController.explore"> click here </a>.</p>
+
+      <h3 id="next-steps">Other Updates</h3>
+      <p>Click, here <a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO Corona virus latest Updates on Coronavirus</a>.</p>
+    </article>
+    <aside>
+      @commonSidebar()
+    </aside>
+  </div>
+</section>
+}
+}
