@@ -10,7 +10,7 @@ scalaVersion := "2.11.12"
 val sparkVersion = "2.4.5"
 autoScalaLibrary := false
 
-herokuAppName in Compile := "play-scala-seed"
+//herokuAppName in Compile := "play-scala-seed"
 //crossScalaVersions := Seq("2.12.8", "2.11.12")
 
 // libraryDependencies += guice
